@@ -1,7 +1,7 @@
 {
-  "name": "@superset-ui/monorepo",
+  "name": "@superset-ui/fork",
   "version": "0.0.0",
-  "description": "Superset UI",
+  "description": "Superset UI FORK",
   "private": true,
   "scripts": {
     "build": "node ./scripts/build.js",
@@ -38,7 +38,10 @@
     "ci:release-from-tag": "yarn clean-npm-lock && lerna publish from-package --yes",
     "ci:release-conventional": "yarn clean-npm-lock && lerna publish --conventional-commits --create-release github --yes"
   },
-  "repository": "https://github.com/apache-superset/superset-ui.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apache-superset/superset-ui.git"
+  },
   "keywords": [
     "apache",
     "superset",
@@ -160,5 +163,16 @@
     "*.{js,jsx,ts,tsx,json,md}": [
       "prettier --write"
     ]
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/apache-superset/superset-ui/issues"
+  },
+  "homepage": "https://github.com/apache-superset/superset-ui#readme",
+  "main": ".eslintrc.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "devDependencies": {},
+  "author": ""
 }
